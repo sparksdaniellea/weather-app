@@ -1,0 +1,148 @@
+body {
+  margin: 20px;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/088/867/original/diego-ph-xW42e724p00-unsplash.jpg?1688836514);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #031926;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 100px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  padding: 0px;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+h4 {
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  font-size: 15px;
+}
+.col-4 {
+  padding: 10px;
+  text-align: left;
+}
+.col-7 {
+  background-color: rgba(255, 252, 247, 0.6);
+  border-radius: 40px;
+  color: #031926;
+  margin: 15px;
+  float: left;
+  padding: 7px;
+  width: 11%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.col-7:hover {
+  background-color: rgba(255, 252, 247, 0.3);
+}
+.current-weather {
+  background-color: rgba(255, 252, 247, 0.6);
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  line-height: 20px;
+  padding: 40px;
+  border-radius: 50px;
+  width: 450px;
+  align-content: center;
+}
+.current-weather:hover {
+  background-color: rgba(255, 252, 247, 0.3);
+}
+.fa-sun {
+  color: #f86624;
+}
+.fa-location-dot {
+  font-size: 35px;
+}
+.fa-wind {
+  color: #56a3a6;
+}
+.fa-cloud {
+  color: #fffcf7;
+}
+.fa-cloud-bolt {
+  color: #60636d;
+}
+.search-button,
+.current-location-button,
+.theme-button {
+  background-color: #bb8bf9;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: #fffcf7;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500px;
+  margin: 5px;
+  padding: 8px;
+}
+.current-location-button {
+  display: block;
+  margin: 0 auto;
+}
+
+.search-button:hover,
+.current-location-button:hover {
+  background-color: #ad6aff;
+}
+
+.future-temp {
+  font-size: 20px;
+  font-weight: 500px;
+}
+.temp-unit {
+  font-size: 18px;
+  column-fill: auto;
+  text-decoration: none;
+}
+.week-weather-sun,
+.week-weather-cloud,
+.week-weather-cloud-bolt,
+.week-weather-wind {
+  font-size: 25px;
+  display: inline;
+}
+
+.forecast {
+  text-decoration: none;
+  color: black;
+}
+.forecast:hover {
+  color: #ad6aff;
+}
+
+#search-city {
+  border-radius: 10px;
+  background-color: rgba(255, 252, 247, 0.9);
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  width: 300px;
+  text-align: right;
+}
+#farenheit-link,
+#celcius-link {
+  text-decoration: none;
+  color: black;
+}
+#farenheit-link:hover,
+#celcius-link:hover {
+  color: #ad6aff;
+}
+#description {
+  font-weight: italic;
+}

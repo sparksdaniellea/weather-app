@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="images" href="images/cloud.jpg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" <meta
+    name="viewport" content="width=device-width, initial-scale=1.0" <link href="css/bootstrap.css" rel="stylesheet"
+    type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/cb84c9c143.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link src="index.js" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="search">
+      <form action="search">
+        <input type="text" id="search-city" placeholder="Type a city... 🔎" />
+        <button class="search-button">Search</button>
+      </form>
+    </div>
+    <div class="current-weather">
+      <h4>Currently in</h4>
+      <h2 id="city">Boston</h2>
+      <div class="row">
+        <div class="col-4">
+          <h1 id="current-temp">78</h1>
+        </div>
+        <div class="col-4">
+          <span class="temp-unit" id="temp-unit"> <a href="#" id="celcius-link">°C</a> | <a href="#"
+              id="farenheit-link">°F</a></span>
+        </div>
+      </div>
+      <h4 id="now"> Friday, July 14th 5:54 PM</h4>
+      </br>
+      <p><i class="fa-solid fa-circle-exclamation"></i> Current Condition: <span id="description"> Clear</span><br />
+      </p>
+      </br>
+      <button class="current-location-button" id="current-location-button">Current Location</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7">
+      <p><i class="fa-solid fa-sun week-weather-sun"></i></p>
+      Mon
+      <p id="future-temp-1">76°</p>
+    </div>
+    <div class="col-7">
+      <p><i class="fa-solid fa-sun week-weather-sun"></i></p>
+      Tues
+      <p id="future-temp-2">76°</p>
+    </div>
+    <div class="col-7">
+      <p><i class="fa-solid fa-wind week-weather-wind"></i></p>
+      Wed
+      <p id="future-temp-3">76°</p>
+    </div>
+    <div class="col-7">
+      <p><i class="fa-solid fa-cloud week-weather-cloud"></i></p>
+      Thurs
+      <p id="future-temp-4">76°</p>
+    </div>
+    <div class="col-7">
+      <p><i class="fa-solid fa-cloud week-weather-cloud"></i></p>
+      Fri
+      <p id="future-temp-5">76°</p>
+    </div>
+    <div class="col-7">
+      <p><i class="fa-solid fa-wind week-weather-wind"></i></p>
+      Sat
+      <p id="future-temp-6">76°</p>
+    </div>
+    <div class="col-7">
+      <p><i class="fa-solid fa-cloud-bolt week-weather-cloud-bolt"></i></p>
+      Sun
+      <p id="future-temp-7">76°</p>
+    </div>
+    <div class="col">
+      </br>
+      <a href="#" class="forecast">Weekly</a> | <a href="#" class="forecast">Hourly</a>
+      </br>
+    </div>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
