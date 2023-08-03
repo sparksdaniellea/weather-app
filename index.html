@@ -40,62 +40,66 @@
       <h2 id="city">Boston</h2>
       <div class="row">
         <div class="col-4">
+          <img id="current-icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky" />
+        </div>
+        <div class="col-4">
           <h1 id="current-temp">78</h1>
         </div>
         <div class="col-4">
-          <span class="temp-unit" id="temp-unit"> <a href="#" id="celcius-link">°C</a> | <a href="#"
-              id="farenheit-link">°F</a></span>
+          <span class="temp-unit" id="temp-unit"> <a href="#" id="farenheit-link">°F</a> | <a href="#"
+              id="celcius-link">°C</a></span>
         </div>
       </div>
+
       <h4 id="now"> Friday, July 14th 5:54 PM</h4>
       </br>
-      <p><i class="fa-solid fa-circle-exclamation"></i> Current Condition: <span id="description"> Clear</span><br />
-      </p>
-      </br>
+      <p><i class="fa-solid fa-circle-exclamation"></i> Current Condition: <span id="description">
+          Clear</span></p>
+      <br />
+
       <button class="current-location-button" id="current-location-button">Current Location</button>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-7">
-      <p><i class="fa-solid fa-sun week-weather-sun"></i></p>
-      Mon
-      <p id="future-temp-1">76°</p>
+    <div class="row">
+      <div class="col-7">
+        <p><i class="fa-solid fa-sun week-weather-sun"></i></p>
+        Mon
+        <p id="future-temp-1">76°</p>
+      </div>
+      <div class="col-7">
+        <p><i class="fa-solid fa-sun week-weather-sun"></i></p>
+        Tues
+        <p id="future-temp-2">76°</p>
+      </div>
+      <div class="col-7">
+        <p><i class="fa-solid fa-wind week-weather-wind"></i></p>
+        Wed
+        <p id="future-temp-3">76°</p>
+      </div>
+      <div class="col-7">
+        <p><i class="fa-solid fa-cloud week-weather-cloud"></i></p>
+        Thurs
+        <p id="future-temp-4">76°</p>
+      </div>
+      <div class="col-7">
+        <p><i class="fa-solid fa-cloud week-weather-cloud"></i></p>
+        Fri
+        <p id="future-temp-5">76°</p>
+      </div>
+      <div class="col-7">
+        <p><i class="fa-solid fa-wind week-weather-wind"></i></p>
+        Sat
+        <p id="future-temp-6">76°</p>
+      </div>
+      <div class="col-7">
+        <p><i class="fa-solid fa-cloud-bolt week-weather-cloud-bolt"></i></p>
+        Sun
+        <p id="future-temp-7">76°</p>
+      </div>
+      </br>
+      <p> <a href="https://github.com/sparksdaniellea/weather-app.git">Open Sourced Code</a> by Danielle Sparks
+      </p>
     </div>
-    <div class="col-7">
-      <p><i class="fa-solid fa-sun week-weather-sun"></i></p>
-      Tues
-      <p id="future-temp-2">76°</p>
-    </div>
-    <div class="col-7">
-      <p><i class="fa-solid fa-wind week-weather-wind"></i></p>
-      Wed
-      <p id="future-temp-3">76°</p>
-    </div>
-    <div class="col-7">
-      <p><i class="fa-solid fa-cloud week-weather-cloud"></i></p>
-      Thurs
-      <p id="future-temp-4">76°</p>
-    </div>
-    <div class="col-7">
-      <p><i class="fa-solid fa-cloud week-weather-cloud"></i></p>
-      Fri
-      <p id="future-temp-5">76°</p>
-    </div>
-    <div class="col-7">
-      <p><i class="fa-solid fa-wind week-weather-wind"></i></p>
-      Sat
-      <p id="future-temp-6">76°</p>
-    </div>
-    <div class="col-7">
-      <p><i class="fa-solid fa-cloud-bolt week-weather-cloud-bolt"></i></p>
-      Sun
-      <p id="future-temp-7">76°</p>
-    </div>
-    </br>
-    <p> <a href="https://github.com/sparksdaniellea/weather-app.git">Open Sourced Code</a> by Danielle Sparks
-    </p>
-  </div>
-  <script src="src/index.js"></script>
+    <script src="src/index.js"></script>
 </body>
 
 </html>

@@ -39,12 +39,18 @@ now.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear} $
 
 // search for country & geolocation/weather api
 function showTemperature(response) {
+  let iconElement = document.querySelector("#current-icon");
+  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 function changeCity(city) {
