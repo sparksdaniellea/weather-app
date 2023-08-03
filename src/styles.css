@@ -7,7 +7,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 h1 {
-  font-size: 100px;
+  font-size: 75px;
   font-weight: 200;
   font-family: "Poppins", sans-serif;
   padding: 0px;
@@ -28,6 +28,12 @@ h2 {
 
 p {
   font-size: 15px;
+}
+strong {
+  font-weight: 500px;
+}
+.fa-circle-exclamation {
+  color: #bb8bf9;
 }
 .col-4 {
   padding: 10px;
@@ -54,6 +60,7 @@ p {
   margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 25px;
+
   line-height: 20px;
   padding: 40px;
   border-radius: 50px;
@@ -63,21 +70,7 @@ p {
 .current-weather:hover {
   background-color: rgba(255, 252, 247, 0.3);
 }
-.fa-sun {
-  color: #f86624;
-}
-.fa-location-dot {
-  font-size: 35px;
-}
-.fa-wind {
-  color: #56a3a6;
-}
-.fa-cloud {
-  color: #fffcf7;
-}
-.fa-cloud-bolt {
-  color: #60636d;
-}
+
 .search-button,
 .current-location-button,
 .theme-button {
@@ -91,10 +84,6 @@ p {
   font-weight: 500px;
   margin: 5px;
   padding: 8px;
-}
-.current-location-button {
-  display: block;
-  margin: 0 auto;
 }
 
 .search-button:hover,
@@ -112,13 +101,6 @@ p {
   text-decoration: none;
   text-align: left;
 }
-.week-weather-sun,
-.week-weather-cloud,
-.week-weather-cloud-bolt,
-.week-weather-wind {
-  font-size: 25px;
-  display: inline;
-}
 
 .forecast {
   text-decoration: none;
@@ -126,6 +108,13 @@ p {
 }
 .forecast:hover {
   color: #ad6aff;
+}
+.git-link {
+  color: #ad6aff;
+}
+
+#current-icon {
+  font-size: 300px;
 }
 
 #search-city {
