@@ -101,11 +101,16 @@ function convertToCelsius(event) {
   let celsiusTemperature = ((farenheitTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
 }
 
 function convertToFarenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 let farenheitTemperature = null;
