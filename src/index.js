@@ -40,6 +40,9 @@ now.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear} $
 // search for country & geolocation/weather api
 function showTemperature(response) {
   let iconElement = document.querySelector("#current-icon");
+
+  farenheitTemperature = response.data.main.temp;
+
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
@@ -93,28 +96,24 @@ form.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-changeCity("Boston");
-// convert F to C
+function convertToCelsius(event) {
+  event.preventDefault();
+  let celsiusTemperature = ((farenheitTemperature - 32) * 5) / 9;
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 function convertToFarenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = 66;
-  let futureTemp = document.querySelectorAll(
-    "#future-temp-1, #future-temp-2, #future-temp-3, #future-temp-4, #future-temp-5, #future-temp-6 ,#future-temp-7"
-  );
-  futureTemp.innerHTML = 66;
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = 19;
-  let futureTemp = document.querySelectorAll("#future-temp");
-  futureTemp.innerHTML = 19;
-}
+let farenheitTemperature = null;
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", convertToFarenheit);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+changeCity("Boston");
