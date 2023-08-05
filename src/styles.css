@@ -1,6 +1,9 @@
+a {
+  color: #ad6aff;
+}
 body {
   margin: 20px;
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/088/867/original/diego-ph-xW42e724p00-unsplash.jpg?1688836514);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/284/original/makesumo-QiWqUT9-0yY-unsplash.jpg?1691261475);
   background-size: cover;
   background-repeat: no-repeat;
   color: #031926;
@@ -47,7 +50,7 @@ strong {
   color: #031926;
   margin: 15px;
   float: left;
-  padding: 7px;
+  padding: 15px;
   width: 12%;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -117,6 +120,10 @@ strong {
   color: #ad6aff;
 }
 
+#celsius-link,
+#farenheit-link {
+  text-decoration: none;
+}
 #current-icon {
   font-size: 300px;
 }
