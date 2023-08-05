@@ -92,9 +92,10 @@ form.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-changeCity("Boston");
 
+changeCity("Boston");
 // convert F to C
+
 function convertToFarenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
@@ -104,7 +105,7 @@ function convertToFarenheit(event) {
   );
   futureTemp.innerHTML = 66;
 }
-function convertToCelcius(event) {
+function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = 19;
@@ -115,5 +116,5 @@ function convertToCelcius(event) {
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", convertToFarenheit);
 
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelcius);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);

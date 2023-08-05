@@ -127,12 +127,12 @@ strong {
   text-align: right;
 }
 #farenheit-link,
-#celcius-link {
+#celsius-link {
   text-decoration: none;
   color: black;
 }
 #farenheit-link:hover,
-#celcius-link:hover {
+#celsius-link:hover {
   color: #ad6aff;
 }
 #description {
