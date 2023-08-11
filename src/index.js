@@ -96,6 +96,29 @@ form.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+// forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-7">
+        <img id="future-icon" src="https://openweathermap.org/img/wn/10d@2x.png" width=50px alt="clear sky" />
+        </br>
+        <strong>${day}</strong>
+        </br> <span id="low-temp" class="high-temp">76°</span>
+        <span id="low-temp" class="low-temp">| 69°</span>
+      </div>
+`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+//unit conversion
 function convertToCelsius(event) {
   event.preventDefault();
   let celsiusTemperature = ((farenheitTemperature - 32) * 5) / 9;
@@ -122,3 +145,4 @@ let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", convertToFarenheit);
 
 changeCity("Boston");
+displayForecast();

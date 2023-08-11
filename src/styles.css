@@ -1,6 +1,7 @@
 a {
   color: #ad6aff;
 }
+
 body {
   margin: 20px;
   background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/284/original/makesumo-QiWqUT9-0yY-unsplash.jpg?1691261475);
@@ -110,6 +111,9 @@ strong {
   font-weight: 300;
 }
 
+.low-temp {
+  color: rgba(0, 0, 0, 0.4);
+}
 .active {
   cursor: default;
   color: black;
@@ -124,6 +128,7 @@ strong {
 #farenheit-link {
   text-decoration: none;
 }
+
 #current-icon {
   font-size: 300px;
 }
