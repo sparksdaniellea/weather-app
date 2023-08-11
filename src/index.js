@@ -43,7 +43,6 @@ function showTemperature(response) {
 
   farenheitTemperature = response.data.main.temp;
 
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -54,6 +53,7 @@ function showTemperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  getForecast(response.data.coord);
 }
 
 function changeCity(city) {
@@ -97,27 +97,50 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 // forecast
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  return days[day];
+}
+
+function createForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"];
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-      <div class="col-7">
-        <img id="future-icon" src="https://openweathermap.org/img/wn/10d@2x.png" width=50px alt="clear sky" />
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-2">
+        <img id="future-icon" src="https://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }.png" width=50px alt="" />
         </br>
-        <strong>${day}</strong>
-        </br> <span id="low-temp" class="high-temp">76°</span>
-        <span id="low-temp" class="low-temp">| 69°</span>
+        <strong>${formatDay(forecastDay.dt)}</strong>
+        </br> <span id="low-temp" class="high-temp">${Math.round(
+          forecastDay.temp.max
+        )}°</span>
+        <span id="low-temp" class="low-temp">| ${Math.round(
+          forecastDay.temp.min
+        )}°</span>
       </div>
 `;
+    }
   });
+
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "be81f193e065bf5feb2d944c7336968b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(createForecast);
+}
 //unit conversion
 function convertToCelsius(event) {
   event.preventDefault();
@@ -145,4 +168,3 @@ let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", convertToFarenheit);
 
 changeCity("Boston");
-displayForecast();

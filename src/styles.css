@@ -45,18 +45,18 @@ strong {
   margin-left: 0px;
   vertical-align: top;
 }
-.col-7 {
+.col-2 {
   background-color: rgba(255, 252, 247, 0.6);
   border-radius: 40px;
   color: #031926;
   margin: 15px;
-  float: left;
   padding: 15px;
-  width: 12%;
+  width: 13%;
   text-align: center;
   font-family: "Poppins", sans-serif;
+  align-content: center;
 }
-.col-7:hover {
+.col-2:hover {
   background-color: rgba(255, 252, 247, 0.5);
 }
 .current-weather {
@@ -65,7 +65,6 @@ strong {
   margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 25px;
-
   line-height: 20px;
   padding: 40px;
   border-radius: 50px;
