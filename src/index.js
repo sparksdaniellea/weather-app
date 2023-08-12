@@ -108,7 +108,7 @@ function createForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"];
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row justify-content-center">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
